@@ -7,9 +7,11 @@
 ## Spherical to cartesian coordinates
 
 ```c
-v@P = set(
-  cos(lat) * cos(lon),
-  cos(lat) * sin(lon),
-  sin(lat)
-);
+vector sphericalToCartesian(float lat, lon, rad) {
+  return rad * set(
+    cos(lat) * cos(lon),
+    cos(lat) * sin(lon),
+    sin(lat)
+  );
+}
 ```
