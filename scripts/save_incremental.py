@@ -1,0 +1,53 @@
+# Copyright (C) 2017  Niklas Rosenstein
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
+"""
+This script increments the number at the end of the current scene's name and
+saves it as a new file. If there is no number at the end, it will append a
+new number suffix and start from "1".
+"""
+
+import hou
+import os
+import re
+
+new_suffix_format = '_0001'
+regex = re.compile('(.*?)(\d+)(\.\w+)')
+
+def main():
+    hip = hou.hipFile
+    filename = hip.path()
+    match = regex.match(filename)
+    if match:
+        filename, number, ext = match.groups()
+        filename += str(int(number) + 1).rjust(len(number), '0') + ext
+    else:
+        filename, ext = os.path.splitext(filename)
+        filename += new_suffix_format + ext
+
+    if os.path.isfile(filename):
+        overwrite = hou.ui.displayConfirmation(
+            'The file "{}" already exists. Do you want to overwrite it?'
+            .format(filename))
+        if not overwrite:
+            return
+
+    hip.save(filename)
+
+main()
