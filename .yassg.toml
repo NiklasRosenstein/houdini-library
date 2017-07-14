@@ -1,0 +1,4 @@
+site-name = "Houdini Asset Library"
+trailing-slashes = true
+footer-notice = "Copyright &copy; 2017 Niklas Rosenstein"
+github-repository = "NiklasRosenstein/houdini-library"
