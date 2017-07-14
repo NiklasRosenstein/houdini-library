@@ -6,5 +6,8 @@ My personal library of Houdini digital assets and shelf tools.
 
 * assets/ &mdash; Houdini digital assets.
 * icons/ &mdash; Icons used by this library and their attributions.
+* docs/ &mdash; Documentation files.
 * scripts/ &mdash; Scripts that can be added to the Houdini shelf tools.
 * snippets/ &mdash; Short code-snippets for VEX and Python.
+
+[Node.py]: https://nodepy.org/
