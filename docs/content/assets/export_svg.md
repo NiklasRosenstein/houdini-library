@@ -1,4 +1,6 @@
-# assets/export/export_svg.otllc
++++
+title = "Export SVG"
++++
 
 &ndash; Export polylines in the X/Y plane to an SVG file.
 

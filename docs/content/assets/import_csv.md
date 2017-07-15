@@ -1,4 +1,6 @@
-# assets/import/import_csv.otllc
++++
+title = "Import CSV"
++++
 
 &ndash; Import CSV-like data into Houdini from one or multiple files into
 Point or Polygon attributes.
