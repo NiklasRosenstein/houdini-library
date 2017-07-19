@@ -1,9 +1,8 @@
 +++
-title = "Import CSV"
+title = "NR Import CSV"
 +++
 
-&ndash; Import CSV-like data into Houdini from one or multiple files into
-Point or Polygon attributes.
+&ndash; Import CSV like a boss.
 
 __Features__
 

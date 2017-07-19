@@ -1,5 +1,5 @@
 +++
-title = "Export SVG"
+title = "NR Export SVG"
 +++
 
 &ndash; Export polylines in the X/Y plane to an SVG file.
