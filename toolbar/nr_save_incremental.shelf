@@ -1,4 +1,12 @@
-# Copyright (C) 2017  Niklas Rosenstein
+<?xml version="1.0" encoding="UTF-8"?>
+<shelfDocument>
+  <!-- This file contains definitions of shelves, toolbars, and tools.
+ It should not be hand-edited when it is being used by the application.
+ Note, that two definitions of the same element are not allowed in
+ a single file. -->
+
+  <tool name="nr_save_incremental" label="Save Incremental" icon="$HLIBPATH_NR_HOUDINI_LIBRARY/icons/gnome_media_floppy.png">
+    <script scriptType="python"><![CDATA[# Copyright (C) 2017  Niklas Rosenstein
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -51,3 +59,10 @@ def main():
     hip.save(filename)
 
 main()
+]]></script>
+    <keywordList>
+      <keyword>save</keyword>
+      <keyword>incremental</keyword>
+    </keywordList>
+  </tool>
+</shelfDocument>

@@ -1,8 +1,6 @@
-# Conversions
-
-## Table of Contents
-
-  * [Spherical to cartesian coordinates](#spherical-to-cartesian-coordinates)
++++
+title = "Conversions"
++++
 
 ## Spherical to cartesian coordinates
 

@@ -11,3 +11,13 @@ My personal library of Houdini digital assets and shelf tools.
 * snippets/ &mdash; Short code-snippets for VEX and Python.
 
 [Node.py]: https://nodepy.org/
+
+This library can be conveniently installed with [**Houdini-manage**][hmanage].
+
+    $ git clone https://github.com/NiklasRosenstein/houdini-library
+    $ houdini-manage library --install houdini-library
+    library "NR_HOUDINI_LIBRARY" installed
+    $ houdini-manage library --list
+    NR_HOUDINI_LIBRARY v1.0.0 (C:\Users\niklas\repos\houdini-library)
+
+[hmanage]: https://github.com/NiklasRosenstein/houdini-manage
