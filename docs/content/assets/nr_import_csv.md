@@ -31,4 +31,10 @@ __Screenshot__
 
 __Changelog__
 
-*Nothing to see here.*
+*v2*
+
+* add "Space" delimiter type
+
+*v1*
+
+* initial version
