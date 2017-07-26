@@ -5,7 +5,7 @@
  Note, that two definitions of the same element are not allowed in
  a single file. -->
 
-  <tool name="nr_save_incremental" label="Save Incremental" icon="$HLIBPATH_NR_HOUDINI_LIBRARY/icons/gnome_media_floppy.png">
+  <tool name="nr_save_incremental" label="NR Save Incremental" icon="$HLIBPATH_NR_HOUDINI_LIBRARY/icons/gnome_media_floppy.png">
     <script scriptType="python"><![CDATA[# Copyright (C) 2017  Niklas Rosenstein
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
