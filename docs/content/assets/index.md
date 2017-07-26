@@ -5,6 +5,7 @@ render-toc = false
 
 Here is a description of all digital assets in Niklas' Houdini Library.
 
+* [[assets/nr_collatz_conjecture]]
 * [[assets/nr_export_svg]]
 * [[assets/nr_import_csv]]
 * [[assets/nr_openflights_data]]
