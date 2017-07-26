@@ -2,6 +2,8 @@
 title = "NR Openflights Data"
 +++
 
+<img align="right" src="https://img.shields.io/badge/Houdini-Indie-orange.svg">
+
 [Openflights]: https://openflights.org/data.html
 
 &mdash; Easily use [Openflights] data in Houdini.

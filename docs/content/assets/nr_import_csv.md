@@ -2,6 +2,8 @@
 title = "NR Import CSV"
 +++
 
+<img align="right" src="https://img.shields.io/badge/Houdini-Indie-orange.svg">
+
 &ndash; Import CSV like a boss.
 
 ## Features

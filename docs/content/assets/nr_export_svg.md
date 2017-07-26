@@ -2,6 +2,8 @@
 title = "NR Export SVG"
 +++
 
+<img align="right" src="https://img.shields.io/badge/Houdini-Indie-orange.svg">
+
 &ndash; Export polylines in the X/Y plane to an SVG file.
 
 ## Screenshots

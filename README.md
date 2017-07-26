@@ -11,6 +11,14 @@
 
 The documentation can be found at https://niklasrosenstein.github.io/houdini-library
 
+In the documentation, nodes will be marked with one of the following badges
+to indicate the license that the HDA was saved with. Since I'm using a
+Houdini Indie license, most of the assets are going to be Indie based.
+
+* ![](https://img.shields.io/badge/Houdini-Apprentice-blue.svg)
+* ![](https://img.shields.io/badge/Houdini-Indie-orange.svg)
+* ![](https://img.shields.io/badge/Houdini-FX-green.svg)
+
 ## Installation
 
 Use the green Download button on the upper right and choose "Download ZIP".
