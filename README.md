@@ -1,4 +1,8 @@
-# Niklas' Houdini Library
+<p align="center">
+  <img src="http://i.imgur.com/sdRGzSA.png">
+</p>
+<h1 align="center">Niklas' Houdini Library</h1>
+
 
 <img align="right" src="https://img.shields.io/badge/License-MIT-yellow.svg">
 &mdash; A collection of digital assets, shelf tools and code snippets.
