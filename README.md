@@ -37,5 +37,5 @@ HOUDINI_PATH="&"
 
 # Add the library to the HOUDINI_PATH. Replace the path with the absolute
 # path to where you placed the library. Use : instead of ; on macOS.
-HOUDINI_PATH="$HOUDINI_PATH;C:\Users\niklas\repos\houdini-library
+HOUDINI_PATH="$HOUDINI_PATH;C:\Users\niklas\repos\houdini-library"
 ```
