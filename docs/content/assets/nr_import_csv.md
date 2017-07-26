@@ -35,18 +35,15 @@ does not match the string "LSB".
 
 ## Changelog
 
-### v3
-
-* add ability to reference sections from another HDA using the following
-  syntax in the File/Directory parameter: `op:path/to/node?filename`
-
-### v2
-
-* add "Space" delimiter type
-
-### v1
-
-* initial version
+* v4
+  * fix NameError when loading from a file (bug introduced in v3)
+* v3
+  * add ability to reference sections from another HDA using the following
+    syntax in the File/Directory parameter: `op:path/to/node?filename`
+* v2
+  * add "Space" delimiter type
+* v1
+  * initial version
 
 ## Icon Attribution
 
