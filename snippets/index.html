@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.11/semantic.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.11/semantic.min.js"></script>
-    <link rel="stylesheet" href="../../static/style.css">
+    <link rel="stylesheet" href="../static/style.css">
     <style>
     body {
       margin-top: 30px;
@@ -56,7 +56,7 @@
       
       
       
-        <a href="../../" class="item ">Home</a>
+        <a href="../" class="item ">Home</a>
       
     
         
@@ -68,7 +68,7 @@
         
         <div class="ui simple dropdown item">
           
-            <a href="../../assets/" class="">Digital Assets</a>
+            <a href="../assets/" class="">Digital Assets</a>
           
           <i class="dropdown icon"></i>
           <div class="menu">
@@ -77,7 +77,7 @@
       
       
       
-        <a href="../../assets/nr_export_svg/" class="item ">NR Export SVG</a>
+        <a href="../assets/nr_export_svg/" class="item ">NR Export SVG</a>
       
     
             
@@ -85,7 +85,7 @@
       
       
       
-        <a href="../../assets/nr_import_csv/" class="item ">NR Import CSV</a>
+        <a href="../assets/nr_import_csv/" class="item ">NR Import CSV</a>
       
     
             
@@ -102,7 +102,7 @@
         
         <div class="ui simple dropdown item">
           
-            <a href="../" class="">Snippets</a>
+            <a href="./" class="active">Snippets</a>
           
           <i class="dropdown icon"></i>
           <div class="menu">
@@ -111,7 +111,7 @@
       
       
       
-        <a href="./" class="item active">Conversions</a>
+        <a href="conversions/" class="item ">Conversions</a>
       
     
             
@@ -133,25 +133,10 @@
         <!-- content -->
         <div class="ui text container">
           
-            <h1>Conversions</h1>
+            <h1>Snippets</h1>
           
-          <h2 id="spherical-to-cartesian-coordinates">Spherical to cartesian coordinates</h2>
-<p>The formula that you want to use depends on the target coordinate system
-and the orientation you choose for the sphere. To get an earth-like
-orientation with poles along the Y-axis in Houdini's right-handed coordinate
-system:</p>
-<div class="codehilite"><pre><span></span><span class="n">vector</span> <span class="nf">sphericalToCartesian</span><span class="p">(</span><span class="kt">float</span> <span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">rad</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="n">rad</span> <span class="o">*</span> <span class="n">set</span><span class="p">(</span>
-    <span class="o">-</span><span class="n">cos</span><span class="p">(</span><span class="n">lat</span><span class="p">)</span> <span class="o">*</span> <span class="n">cos</span><span class="p">(</span><span class="n">lon</span><span class="p">),</span>
-    <span class="n">sin</span><span class="p">(</span><span class="n">lat</span><span class="p">),</span>
-    <span class="n">cos</span><span class="p">(</span><span class="n">lat</span><span class="p">)</span> <span class="o">*</span> <span class="n">sin</span><span class="p">(</span><span class="n">lon</span><span class="p">)</span>
-  <span class="p">);</span>
-<span class="p">}</span>
-</pre></div>
-
-
-<p><img alt="" src="https://i.imgur.com/0sccqS6.png" /></p>
-<p><em>Airport locations loaded from https://openflights.org/data.html</em></p>
+          <p>This section contains code snippets for Houdini that you can use in your
+VEX and Python nodes and scripts.</p>
         </div>
 
         <!-- disqus support -->
@@ -162,9 +147,7 @@ system:</p>
         
           <h1>Table of Contents</h1>
           <div class="toc">
-<ul>
-<li><a href="#spherical-to-cartesian-coordinates">Spherical to cartesian coordinates</a></li>
-</ul>
+<ul></ul>
 </div>
 
         

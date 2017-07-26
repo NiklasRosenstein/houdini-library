@@ -7,9 +7,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.11/semantic.min.js"></script>
     <link rel="stylesheet" href="static/style.css">
     <style>
-    h1, h2, h3, h4, h5, h6 {
-      padding-top: 60px;
-      margin-top: -50px;
+    body {
+      margin-top: 30px;
+    }
+    img[align=left] {
+      padding-right: 1em;
+    }
+    img[align=right] {
+      padding-left: 1em;
+    }
+    .ui.text::after {
+      clear: both;
+      content: "";
     }
     .ui.footer.segment {
       margin: 5em 0em 0em;
@@ -29,7 +38,6 @@
     }
     </style>
 
-    <!-- Google Analytics -->
     
   </head>
   <body>
@@ -57,9 +65,10 @@
       
       
         
+        
         <div class="ui simple dropdown item">
           
-            Houdini Digital Assets
+            <a href="assets/" class="">Digital Assets</a>
           
           <i class="dropdown icon"></i>
           <div class="menu">
@@ -90,9 +99,10 @@
       
       
         
+        
         <div class="ui simple dropdown item">
           
-            Snippets
+            <a href="snippets/" class="">Snippets</a>
           
           <i class="dropdown icon"></i>
           <div class="menu">
@@ -111,8 +121,8 @@
     
         
 
-      <!-- GitHub -->
       
+        <!-- GitHub -->
         <a class="item right floated" href="https://github.com/NiklasRosenstein/houdini-library"><i class="github icon"></i>NiklasRosenstein/houdini-library</a>
       
       </div>
@@ -123,22 +133,26 @@
         <!-- content -->
         <div class="ui text container">
           
-          <h1 id="houdini-library">houdini-library</h1>
-<p><a href="https://opensource.org/licenses/MIT"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" /></a></p>
-<p>My personal library of Houdini digital assets and shelf tools.</p>
-<ul>
-<li>assets/ &mdash; Houdini digital assets.</li>
-<li>icons/ &mdash; Icons used by this library and their attributions.</li>
-<li>docs/ &mdash; Documentation files.</li>
-<li>scripts/ &mdash; Scripts that can be added to the Houdini shelf tools.</li>
-<li>snippets/ &mdash; Short code-snippets for VEX and Python.</li>
-</ul>
-<p>This library can be conveniently installed with <a href="https://github.com/NiklasRosenstein/houdini-manage"><strong>Houdini-manage</strong></a>.</p>
-<div class="codehilite"><pre><span></span>$ git clone https://github.com/NiklasRosenstein/houdini-library
-$ houdini-manage library --install houdini-library
-library <span class="s2">&quot;NR_HOUDINI_LIBRARY&quot;</span> installed
-$ houdini-manage library --list
-NR_HOUDINI_LIBRARY v1.0.0 <span class="o">(</span>C:<span class="se">\U</span>sers<span class="se">\n</span>iklas<span class="se">\r</span>epos<span class="se">\h</span>oudini-library<span class="o">)</span>
+          <h1 id="niklas-houdini-library">Niklas' Houdini Library</h1>
+<p><img align="right" src="https://img.shields.io/badge/License-MIT-yellow.svg">
+&mdash; A collection of digital assets, shelf tools and code snippets.</p>
+<h2 id="documentation">Documentation</h2>
+<p>The documentation can be found at https://niklasrosenstein.github.io/houdini-library</p>
+<h2 id="installation">Installation</h2>
+<p>Use the green Download button on the upper right and choose "Download ZIP".
+Alternatively, if you're familiar with Git, you can also clone this repository
+and pull to get updates.</p>
+<p>Once you've placed the library in a directory of your choice, update your
+Houdini environment like so (by editing the <code>houdini.env</code> file in your user
+preferences folder):</p>
+<div class="codehilite"><pre><span></span># Make sure HOUDINI_PATH has its default value. Omit this line if there is
+# already one like this, otherwise make sure that it&#39;s the first line in
+# the file.
+HOUDINI_PATH=&quot;&amp;&quot;
+
+# Add the library to the HOUDINI_PATH. Replace the path with the absolute
+# path to where you placed the library. Use : instead of ; on macOS.
+HOUDINI_PATH=&quot;$HOUDINI_PATH;C:\Users\niklas\repos\houdini-library
 </pre></div>
         </div>
 
