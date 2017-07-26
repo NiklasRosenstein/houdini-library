@@ -40,3 +40,7 @@ does not match the string "LSB".
 ### v1
 
 * initial version
+
+## Icon Attribution
+
+csv_text.png &ndash; Bdate Kaspar/Franziska Sponsel (Creative Commons Attribution) http://findicons.com/icon/84601/csv_text

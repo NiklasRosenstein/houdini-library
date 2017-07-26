@@ -14,3 +14,7 @@ title = "NR Export SVG"
 ### v1
 
 * Initial version
+
+## Icon Attribution
+
+gnome_mime_image_svg.png &ndash; Roman Hubatch (Creative Commons Attribution) http://findicons.com/icon/196666/gnome_mime_image_svg
