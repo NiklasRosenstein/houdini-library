@@ -7,5 +7,6 @@
 
   <toolshelf name="nr_houdini_library" label="NR Houdini Library">
     <memberTool name="nr_save_incremental"/>
+    <memberTool name="nr_remove_unused_materials"/>
   </toolshelf>
 </shelfDocument>
