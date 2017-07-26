@@ -6,4 +6,4 @@ render-toc = false
 This section describes the shelftools in Niklas' Houdini Library. All
 shelftools are available in the "NR Houdini Library" panel.
 
-* [[shelftools/nr_incremental_save]]
+{{ directory_contents() }}
