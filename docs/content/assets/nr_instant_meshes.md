@@ -27,9 +27,10 @@ into your Houdini preferences directory.
 
 ## Changelog
 
-### v1
-
-* Initial version
+* v2
+  * Suppress Instant Mesh console window popping up when the node is cooking
+* v1
+  * Initial version
 
 ## Acknowledgements
 
