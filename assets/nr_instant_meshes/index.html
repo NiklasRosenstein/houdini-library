@@ -81,7 +81,7 @@
       
       
       
-        <a href="./" class="item active">NR Collatz Conjecture</a>
+        <a href="../nr_collatz_conjecture/" class="item ">NR Collatz Conjecture</a>
       
     
             
@@ -105,7 +105,7 @@
       
       
       
-        <a href="../nr_instant_meshes/" class="item ">NR Instant Meshes</a>
+        <a href="./" class="item active">NR Instant Meshes</a>
       
     
             
@@ -195,20 +195,65 @@
         <!-- content -->
         <div class="ui text container">
           
-            <h1>NR Collatz Conjecture</h1>
+            <h1>NR Instant Meshes</h1>
           
-          <p><img align="right" src="https://img.shields.io/badge/Houdini-Indie-orange.svg"></p>
-<p>&mdash; A polyline tree that visualizes the <a href="https://en.wikipedia.org/wiki/Collatz_conjecture">Collatz Conjecture</a>.</p>
-<p>Inspired by <a href="https://www.youtube.com/watch?v=LqKpkdRRLZw">Numberphile - Collatz Conjecture in Color</a>.</p>
-<h2 id="screenshots">Screenshots</h2>
-<p><img alt="" src="https://i.imgur.com/byfExVH.png" /></p>
-<h2 id="example-renders">Example Renders</h2>
-<p><img alt="" src="https://www.niklasrosenstein.com/post/2017-04-25-collatz-conjecture/renders-01.jpg" /></p>
-<h2 id="changelog">Changelog</h2>
-<h3 id="v1">v1</h3>
+          <p>&mdash; Wrapper for the <a href="https://github.com/wjakob/instant-meshes">Instant Meshes</a> command-line interface.</p>
+<p>This digital asset can feed your geometry into <a href="https://github.com/wjakob/instant-meshes">Instant Meshes</a> and
+read the result back into Houdini. The Instant Meshes executables are
+bundled with the asset for Windows, macOS and Linux.</p>
+<p>When the asset is first used, it will unpack the Instant Meshes executable
+into your Houdini preferences directory.</p>
+<h2 id="todolist">Todolist</h2>
 <ul>
-<li>Initial version from the blogpost <a href="https://www.niklasrosenstein.com/post/2017-04-25-collatz-conjecture/">Collatz Conjecture @ niklasrosenstein.com</a>.</li>
+<li>Support Singularities and Edge constraints</li>
 </ul>
+<h2 id="screenshots">Screenshots</h2>
+<p align="center"><img src="https://i.imgur.com/uS1ROqs.png"></p>
+
+<p align="center"><img src="https://i.imgur.com/MLXhMBq.png"></p>
+
+<h2 id="acknowledgements">Acknowledgements</h2>
+<div class="codehilite"><pre><span></span><span class="gh">Instant Meshes</span>
+<span class="gh">==============</span>
+
+Copyright (c) 2015 Wenzel Jakob, Daniele Panozzo, Marco Tarini,
+and Olga Sorkine-Hornung. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+<span class="m">1.</span> Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+<span class="m">2.</span> Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+<span class="m">3.</span> Neither the name of the copyright holder nor the names of its contributors
+   may be used to endorse or promote products derived from this software
+   without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+You are under no obligation whatsoever to provide any bug fixes, patches, or
+upgrades to the features, functionality or performance of the source code
+(&quot;Enhancements&quot;) to anyone; however, if you choose to make your Enhancements
+available either publicly, or directly to the authors of this software, without
+imposing a separate written license agreement for such Enhancements, then you
+hereby grant the following license: a non-exclusive, royalty-free perpetual
+license to install, use, modify, prepare derivative works, incorporate into
+other computer software, distribute, and sublicense such enhancements or
+derivative works thereof, in binary and source code form.
+</pre></div>
         </div>
 
         <!-- disqus support -->
@@ -224,12 +269,9 @@
           <h1>Table of Contents</h1>
           <div class="toc">
 <ul>
+<li><a href="#todolist">Todolist</a></li>
 <li><a href="#screenshots">Screenshots</a></li>
-<li><a href="#example-renders">Example Renders</a></li>
-<li><a href="#changelog">Changelog</a><ul>
-<li><a href="#v1">v1</a></li>
-</ul>
-</li>
+<li><a href="#acknowledgements">Acknowledgements</a></li>
 </ul>
 </div>
 
