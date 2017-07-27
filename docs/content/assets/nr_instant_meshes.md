@@ -21,6 +21,13 @@ into your Houdini preferences directory.
 
 <p align="center"><img src="https://i.imgur.com/uS1ROqs.png"></p>
 <p align="center"><img src="https://i.imgur.com/MLXhMBq.png"></p>
+<p align="center"><img src="https://i.imgur.com/ulsnjrL.jpg"></p>
+
+## Changelog
+
+### v1
+
+* Initial version
 
 ## Acknowledgements
 
