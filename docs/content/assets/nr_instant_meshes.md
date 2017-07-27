@@ -2,6 +2,8 @@
 title = "NR Instant Meshes"
 +++
 
+<img align="right" src="https://img.shields.io/badge/Houdini-Indie-orange.svg">
+
 &mdash; Wrapper for the [Instant Meshes][0] command-line interface.
 
   [0]: https://github.com/wjakob/instant-meshes
