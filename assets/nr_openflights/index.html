@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.11/semantic.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.11/semantic.min.js"></script>
-    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../../static/style.css">
     <style>
     body {
       margin-top: 30px;
@@ -60,7 +60,7 @@
       
       
       
-        <a href="../" class="item ">Home</a>
+        <a href="../../" class="item ">Home</a>
       
     
         
@@ -72,7 +72,7 @@
         
         <div class="ui simple dropdown item">
           
-            <a href="../assets/" class="">Digital Assets</a>
+            <a href="../" class="">Digital Assets</a>
           
           <i class="dropdown icon"></i>
           <div class="menu">
@@ -81,7 +81,7 @@
       
       
       
-        <a href="../assets/nr_collatz_conjecture/" class="item ">NR Collatz Conjecture</a>
+        <a href="../nr_collatz_conjecture/" class="item ">NR Collatz Conjecture</a>
       
     
             
@@ -89,7 +89,7 @@
       
       
       
-        <a href="../assets/nr_export_svg/" class="item ">NR Export SVG</a>
+        <a href="../nr_export_svg/" class="item ">NR Export SVG</a>
       
     
             
@@ -97,7 +97,7 @@
       
       
       
-        <a href="../assets/nr_import_csv/" class="item ">NR Import CSV</a>
+        <a href="../nr_import_csv/" class="item ">NR Import CSV</a>
       
     
             
@@ -105,7 +105,7 @@
       
       
       
-        <a href="../assets/nr_instant_meshes/" class="item ">NR Instant Meshes</a>
+        <a href="../nr_instant_meshes/" class="item ">NR Instant Meshes</a>
       
     
             
@@ -113,7 +113,7 @@
       
       
       
-        <a href="../assets/nr_openflights/" class="item ">NR Openflights</a>
+        <a href="./" class="item active">NR Openflights</a>
       
     
             
@@ -130,7 +130,7 @@
         
         <div class="ui simple dropdown item">
           
-            <a href="./" class="active">Shelftools</a>
+            <a href="../../shelftools/" class="">Shelftools</a>
           
           <i class="dropdown icon"></i>
           <div class="menu">
@@ -139,7 +139,7 @@
       
       
       
-        <a href="nr_incremental_save/" class="item ">NR Incremental Save</a>
+        <a href="../../shelftools/nr_incremental_save/" class="item ">NR Incremental Save</a>
       
     
             
@@ -147,7 +147,7 @@
       
       
       
-        <a href="nr_remove_unused_materials/" class="item ">NR Remove Unused Materials</a>
+        <a href="../../shelftools/nr_remove_unused_materials/" class="item ">NR Remove Unused Materials</a>
       
     
             
@@ -164,7 +164,7 @@
         
         <div class="ui simple dropdown item">
           
-            <a href="../snippets/" class="">Snippets</a>
+            <a href="../../snippets/" class="">Snippets</a>
           
           <i class="dropdown icon"></i>
           <div class="menu">
@@ -173,7 +173,7 @@
       
       
       
-        <a href="../snippets/conversions/" class="item ">Conversions</a>
+        <a href="../../snippets/conversions/" class="item ">Conversions</a>
       
     
             
@@ -195,17 +195,23 @@
         <!-- content -->
         <div class="ui text container">
           
-            <h1>Shelftools</h1>
+            <h1>NR Openflights</h1>
           
-          <p>This section describes the shelftools in Niklas' Houdini Library. All
-shelftools are available in the "NR Houdini Library" panel.</p>
+          <p><img align="right" src="https://img.shields.io/badge/Houdini-Indie-orange.svg"></p>
+<p>&mdash; Easily use <a href="https://openflights.org/data.html">Openflights</a> data in Houdini.</p>
+<p>The data files are bundled with the digital. The data was bundled
+on 2017-07-26.</p>
+<h2 id="screenshots">Screenshots</h2>
+<p align="center"><img src="https://i.imgur.com/98aDRcq.png"/></p>
+
+<p align="center"><img src="https://i.imgur.com/3iZpn9a.png"/></p>
+
+<h2 id="dependencies">Dependencies</h2>
+<p>This node builds upon the <a href="../nr_import_csv/">NR Import CSV</a> node.</p>
+<h2 id="changelog">Changelog</h2>
+<h3 id="v1">v1</h3>
 <ul>
-<li>
-<p><a href="nr_incremental_save/">NR Incremental Save</a></p>
-</li>
-<li>
-<p><a href="nr_remove_unused_materials/">NR Remove Unused Materials</a></p>
-</li>
+<li>Initial version</li>
 </ul>
         </div>
 
@@ -216,6 +222,21 @@ shelftools are available in the "NR Houdini Library" panel.</p>
       <!-- Table of contents -->
       <div class="four wide column">
         
+          <a href="../"><i class="arrow up icon"></i> Digital Assets</a>
+        
+        
+          <h1>Table of Contents</h1>
+          <div class="toc">
+<ul>
+<li><a href="#screenshots">Screenshots</a></li>
+<li><a href="#dependencies">Dependencies</a></li>
+<li><a href="#changelog">Changelog</a><ul>
+<li><a href="#v1">v1</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
         
       </div>
     </div>
