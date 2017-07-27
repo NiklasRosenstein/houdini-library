@@ -29,15 +29,30 @@
 mats = set()
 used_mats = set()
 
-for node in hou.node('/shop').children():
-    mats.add(node.path())
+def is_material(node):
+    if isinstance(node, hou.VopNode):
+        return node.type().shaderType() != hou.shaderType.Invalid
+    elif isinstance(node, hou.ShopNode):
+        return True
+    else:
+        return False
+
+for node in hou.root().allSubChildren():
+    if is_material(node):
+        mats.add(node.path())
 
 for node in hou.node('/obj').allSubChildren():
     param = node.parm('shop_materialpath')
     if not param: continue
     used_mats.add(param.eval())
 
+# Mark parent node's as used.
+for node in tuple(used_mats):
+    parent = node.rpartition('/')[0]
+    used_mats.add(parent)
+
 unused_mats = mats - used_mats
+
 if unused_mats:
     message = 'The following materials will be deleted. Proceed?\n\n'
     message += '\n'.join(unused_mats)

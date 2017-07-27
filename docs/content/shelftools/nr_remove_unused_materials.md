@@ -2,9 +2,10 @@
 title = "NR Remove Unused Materials"
 +++
 
-&mdash; Remove unused nodes in the `/shop` network.
+&mdash; Remove unused nodes in the `/shop` and `/mat` network.
 
-Asks for confirmation before the nodes are deleted.
+Can also remove completely unused MAT and SHOP subnetworks. Asks for
+confirmation before the nodes are deleted.
 
 ## Changelog
 
