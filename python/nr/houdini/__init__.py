@@ -23,6 +23,7 @@
 __author__ = 'Niklas Rosenstein <rosensteinniklas@gmail.com>'
 __version__ = '1.0.0'
 
+import functools
 import hou
 import localimport as _localimport
 import os
@@ -61,3 +62,43 @@ def localimport(*args, **kwargs):
     importer = _importer
 
   return importer
+
+
+class operation(object):
+  """
+  A simpler interface to the #hou.InterruptableOperation context manager.
+  """
+
+  def __init__(self, name, long_name=None, open_dialog=False):
+    self._op = hou.InterruptableOperation(name, long_name, open_dialog)
+
+  def __enter__(self):
+    self._op.__enter__()
+    return self
+
+  def __exit__(self, *a):
+    return self._op.__exit__(*a)
+
+  def update(self, percentage=-1.0):
+    return self._op.updateProgress(percentage)
+
+  def update_long(self, percentage=-1.0, status=None):
+    return self._op.updateLongProgress(percentage, status)
+
+  def wraps(self, fun):
+    @functools.wraps(fun)
+    def wrapper(*a, **kw):
+      with self:
+        return fun(*a, **kw)
+    return wrapper
+
+  @classmethod
+  def takes(cls, *args, **kwargs):
+    op = cls(*args, **kwargs)
+    def decorator(fun):
+      @functools.wraps(fun)
+      def wrapper(*a, **kw):
+        with op:
+          return fun(op, *a, **kw)
+      return wrapper
+    return decorator
