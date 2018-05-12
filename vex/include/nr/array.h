@@ -33,3 +33,16 @@ int nr_array_unique_append(int a[]; int v) {
   }
   return 0;
 }
+
+/**
+ * Returns the common elements of the two arrays *a* and *b*.
+ */
+int[] nr_array_common_elements(int a[], b[]) {
+  int result[];
+  for (int i = 0; i < len(a); ++i) {
+    if (nr_array_indexof(b, a[i]) != -1) {
+      append(result, a[i]);
+    }
+  }
+  return result;
+}
