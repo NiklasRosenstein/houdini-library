@@ -67,6 +67,10 @@ DEFINE_NR_ARRAY_COMMON_ELEMENTS(string)
  * Using the returned index to insert the value will keep the
  * array in its sorted state.
  *
+ * The function is stable in that if the value *v* equals a
+ * value that is already in the array, the returned index is
+ * the index of that value.
+ *
  * @param a: The array where the value would be inserted into.
  * @param v: The value that would be inserted.
  * @param num: The number of elements from the beginning of the
