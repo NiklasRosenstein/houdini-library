@@ -137,3 +137,52 @@ int nr_array_sorted_indexof(TYPE a[]; TYPE v) { \
 
 DEFINE_NR_ARRAY_SORTED_INDEXOF(int)
 DEFINE_NR_ARRAY_SORTED_INDEXOF(string)
+
+
+/**
+ * Create an array with indices that, when applied on the same input array
+ * to shuffle the elements, results in a sorted array.
+ *
+ * @param a: The array to sort implicitly.
+ * @return: An array that serves as a translation map to reorder the array
+ *    *a* so it becomes sorted.
+ */
+#define DEFINE_NR_ARRAY_QUICKSORT_INDICES(TYPE) \
+void _nr_array_quicksort_indices(int indices[]; TYPE a[]; int left_, right_) { \
+  int low[], high[]; \
+  append(low, left_); \
+  append(high, right_); \
+  while (len(low) > 0) { \
+    int left = pop(low); \
+    int right = pop(high); \
+    if (left >= right) continue; \
+    TYPE pivot = a[indices[right]]; \
+    int i = left - 1; \
+    for (int j = left; j < right; ++j) { \
+      if (a[indices[j]] < pivot) { \
+        i++; \
+        int temp = indices[i]; \
+        indices[i] = indices[j]; \
+        indices[j] = temp; \
+      } \
+    } \
+    i++; \
+    int temp = indices[i]; \
+    indices[i] = indices[right]; \
+    indices[right] = temp; \
+    append(low, left); \
+    append(high, i-1); \
+    append(low, i+1); \
+    append(high, right); \
+  } \
+} \
+int[] nr_array_quicksort_indices(TYPE a[]) { \
+  int indices[]; resize(indices, len(a)); \
+  for (int i = 0; i < len(a); ++i) indices[i] = i; \
+  _nr_array_quicksort_indices(indices, a, 0, len(a)-1); \
+  return indices; \
+}
+
+DEFINE_NR_ARRAY_QUICKSORT_INDICES(int)
+DEFINE_NR_ARRAY_QUICKSORT_INDICES(float)
+DEFINE_NR_ARRAY_QUICKSORT_INDICES(string)
