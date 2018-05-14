@@ -56,3 +56,19 @@ float nr_geometry_local_one_ring_area(int geo, p) {
   }
   return area;
 }
+
+
+/**
+ * Calculates the cartesian coordinates from spherical coordinates.
+ *
+ * @param lon: Longitute in radians.
+ * @param lat: Latitude in radians.
+ * @param rad: The radius of the sphere.
+ */
+float nr_geometry_spherical_to_cartesian(float lon, lat, rad) {
+  return rad * set(
+    -cos(lat) * cos(lon),
+    sin(lat),
+    cos(lat) * sin(lon)
+  );
+}
