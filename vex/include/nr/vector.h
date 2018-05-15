@@ -3,6 +3,8 @@
  * last modified: 2018-05-12
  */
 
+#pragma once
+
 /**
  * Calculates the angle between two vectors in radians.
  */

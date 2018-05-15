@@ -3,6 +3,9 @@
  * last modified: 2018-05-13
  */
 
+#pragma once
+
+
 /**
  * Returns the index of first occurence of the value *v* in the array *a*.
  * If the value does not exist in the array, returns -1.

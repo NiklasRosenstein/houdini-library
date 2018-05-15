@@ -3,6 +3,7 @@
  * last modified: 2018-05-12
  */
 
+#pragma once
 #include <assert.h>
 #include <nr/array.h>
 

@@ -3,6 +3,9 @@
  * last modified: 2018-05-13
  */
 
+#pragma once
+
+
 /**
  * Represents a sparse N by M matrix.
  */

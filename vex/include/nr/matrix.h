@@ -3,6 +3,9 @@
  * last modified: 2018-05-12
  */
 
+#pragma once
+
+
 /**
  * Represents an N by M matrix.
  */
