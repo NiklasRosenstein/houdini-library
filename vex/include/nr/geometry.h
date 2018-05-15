@@ -68,6 +68,59 @@ int[] nr_geometry_connected_points(int geo, ptnum) {
 
 
 /**
+ * Returns the points of the local one ring of point *ptnum*. If the
+ * returned array's first and last element are not the same, then the
+ * one-ring of the point is not closed.
+ *
+ * @param geo: The geometry.
+ * @param ptnum: The point to return the one ring of.
+ * @return: An array that represents the ordered points of the
+ *    one-ring of *ptnum*.
+ */
+int[] nr_geometry_one_ring(int geo, ptnum) {
+  int result[];
+  int prims[] = pointprims(geo, ptnum);
+  int visited_prims[]; resize(visited_prims, len(prims));
+  for (int i = 0; i < len(visited_prims); ++i) visited_prims[i] = 0;
+
+  while (true) {
+    int lastp = (len(result) == 0 ? -1 : result[len(result)-1]);
+
+    // Look for a primitive that we haven't visited yet and contains
+    // the previous point.
+    int prim = -1;
+    int start = -1;
+    int pts[];
+    for (int i = 0; i < len(prims); ++i) {
+      if (visited_prims[i]) continue;
+      pts = primpoints(geo, prims[i]);
+      start = nr_array_indexof(pts, (lastp == -1 ? ptnum : lastp));
+      if (start != -1) {
+        prim = prims[i];
+        visited_prims[i] = 1;
+        break;
+      }
+    }
+
+    if (prim == -1) break;
+
+    // If the next point in the list is already our main point, we
+    // have to walk around the primitive in the other direction.
+    int direction = (pts[(start+1)%len(pts)] == ptnum) ? -1 : 1;
+
+    // There are at least two edges shared with the main point.
+    for (int i = 1; i < len(pts); ++i) {
+      int p = pts[(start+i*direction)%len(pts)];
+      if (p == ptnum) break;
+      append(result, p);
+    }
+  }
+
+  return result;
+}
+
+
+/**
  * Calculates the cartesian coordinates from spherical coordinates.
  *
  * @param lon: Longitute in radians.
