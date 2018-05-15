@@ -81,3 +81,46 @@ float nr_geometry_spherical_to_cartesian(float lon, lat, rad) {
     cos(lat) * sin(lon)
   );
 }
+
+
+/**
+ * Calculates the average normal of the specified primitives.
+ *
+ * @param geo: The geometry.
+ * @param prims: An array of primitive numbers.
+ */
+vector nr_geometry_average_normal(int geo; int prims[]) {
+  vector sum = set(0, 0, 0);
+  if (len(prims) > 1) {
+    foreach (int prim; prims) {
+      sum += prim_normal(geo, prim, 0.5, 0.5);
+    }
+    sum *= (1.0 / len(prims));
+  }
+  return sum;
+}
+
+
+/**
+ * Returns the normal of a point in the geometry. If the geometry does have a
+ * point attribute `N`, that attribute is returned. Otherwise, the point normal
+ * is computed on the fly.
+ *
+ * @param geo: The geometry.
+ * @param p: The point number.
+ * @param prims: An array of the primitves connected to *p*. Pass this parameter
+ *    only if you have this data at hand anyway. If the `N` attribute exists, the
+ *    parameter is unused.
+ */
+vector nr_geometry_point_normal(int geo, p; int prims[]) {
+  if (hasattrib(geo, 'point', 'N')) {
+    return point(geo, 'N', p);
+  }
+  return nr_geometry_average_normal(geo, prims);
+}
+vector nr_geometry_point_normal(int geo, p) {
+  if (hasattrib(geo, 'point', 'N')) {
+    return point(geo, 'N', p);
+  }
+  return nr_geometry_point_normal(geo, p, pointprims(geo, p));
+}
